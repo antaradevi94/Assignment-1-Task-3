@@ -1,1 +1,3 @@
-
+ select DISTINCT m.LastName, m.FirstName, m.MemberID From (Entry e Left Join
+Member m On e.MemberID =m.MemberID)  WHERE NOT EXISTS (select * FROM Entry y WHERE
+y.MemberID = m.MemberID and y.Year =2013) ;
