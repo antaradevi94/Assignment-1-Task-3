@@ -1,0 +1,8 @@
+sort -t$'\t' -n -k 1 expression.tab > expression_sorted.tab
+
+sort -t$'\t' -n -k 1 annotation.tab > annotation_sorted.tab
+
+join -t$'\t' -1 1 annotation_sorted.tab expression_sorted.tab > Q1_joint_data.tab
+
+
+
